@@ -4,7 +4,21 @@
 
 <div>
   <% @album.photos.each do |photo| %>
-    <h3><a href="photo/<%= photo.id %>"><%= photo.title %></a></h3>
+  <div class="header">
+    <% if photo.top_photo? %>
+      <img src="https://aspirusseniorhealth.files.wordpress.com/2013/04/gold-star-seo1.jpg" width="50px" class="float width">
+    <% end %>
+    <div class="float__header">
+      <h3><%= photo.title %></h3>
+    </div>
+    <div style="clear: both">
+
+    </div>
+  </div>
     <img src="https://www.tacomaworld.com/attachments/forms_photo-jpg.270566/" width="500px">
   <% end %>
+</div>
+
+<div>
+  <a href="/home">Home</a>
 </div>
