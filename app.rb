@@ -2,7 +2,6 @@ require "pry"
 require "active_record"
 require "sqlite3"
 
-require_relative "database_setup.rb"
 
 ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'photo_albums.db')
 
@@ -11,5 +10,8 @@ ActiveRecord::Base.logger = ActiveSupport::Logger.new(STDOUT)
 
 # Models
 require_relative "models/photographer.rb"
+
+require_relative "./database_setup.rb"
+
 
 binding.pry
