@@ -1,0 +1,5 @@
+<div>
+  <% Album.all.each do |album| %>
+    <a href="album/<%= album.id %>"><%= album.title %></a><br>
+  <% end %>
+</div>
