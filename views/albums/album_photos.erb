@@ -1,0 +1,10 @@
+<div>
+  <h2><%= @album.title %></h2>
+</div>
+
+<div>
+  <% @album.photos.each do |photo| %>
+    <h3><a href="photo/<%= photo.id %>"><%= photo.title %></a></h3>
+    <img src="https://www.tacomaworld.com/attachments/forms_photo-jpg.270566/" width="500px">
+  <% end %>
+</div>

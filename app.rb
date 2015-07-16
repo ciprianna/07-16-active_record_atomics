@@ -20,3 +20,4 @@ require_relative "database_setup.rb"
 
 # Controllers
 require_relative "controllers/main.rb"
+require_relative "controllers/albums.rb"
