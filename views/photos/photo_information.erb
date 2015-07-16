@@ -10,8 +10,9 @@
 
     </div>
   </div>
-  <img src="http://i.telegraph.co.uk/multimedia/archive/02790/squirrel_2790142b.jpg">
+  <img src="http://www.wallpapers76.com/photo/7551/Cute-Cats-063.jpg">
   <h3>Location: <%= @photo.location %></h3>
+  <% @photographer = Photographer.find(@photo.photographer_id) %>
   <h3>Photographer: <%= @photographer.name %></h3>
 </div>
 

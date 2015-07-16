@@ -1,0 +1,19 @@
+<div>
+  <h2>Add a new photo</h2>
+  <form action="/save_new_photo">
+    <h3>Title of the Photo</h3>
+    <input type="text" name="photos[title]" placeholder="Photo Title">
+    <h3>Location of photo</h3>
+    <input type="text" name="photos[location]" placeholder="Location">
+    <h3>Photographer (if photographer does not exist, add them <a href="/add_photographer">here</a> first.)</h3>
+    <select name="photos[photographer_id]">
+      <% Photographer.all.each do |photographer| %>
+      <option value="<%= photographer.id %>"><%= photographer.name %></option>
+    </select>
+    <input type="submit">
+  </form>
+</div>
+
+<div>
+  <a href="/home">Home</a>
+</div>
