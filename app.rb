@@ -10,8 +10,9 @@ ActiveRecord::Base.logger = ActiveSupport::Logger.new(STDOUT)
 
 # Models
 require_relative "models/photographer.rb"
+require_relative "models/photo.rb"
 
-require_relative "./database_setup.rb"
-
+# Database Setup file
+require_relative "database_setup.rb"
 
 binding.pry
