@@ -27,7 +27,7 @@ end
 # albums_photos table
 unless ActiveRecord::Base.connection.table_exists?(:albums_photos)
   ActiveRecord::Base.connection.create_table :albums_photos do |table|
-    table.integer :photographer_id
+    table.integer :photo_id
     table.integer :album_id
   end
 end
