@@ -57,3 +57,22 @@ get "/save_photos_for_album" do
 
   erb :"index"
 end
+
+# ------------------------------------------------------------------------------
+# Delete an album
+# ------------------------------------------------------------------------------
+# Step 1 - Display a form
+get "/delete_album" do
+  erb :"albums/delete_album"
+end
+
+# Step 2 - Delete the selected album
+get "/delete_selected_album" do
+  @album_to_delete = Album.find(params["album"]["id"])
+  if params["album"]["confirm_delete"] == "yes"
+    @album_to_delete.destroy
+    erb :"albums/deleted"
+  else
+    erb :"index"
+  end
+end

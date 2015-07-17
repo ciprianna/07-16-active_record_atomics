@@ -1,0 +1,13 @@
+<div>
+  <% Photographer.all.each do |person| %>
+    <ul>
+      <li>
+        <%= person.name %>, <i><%= person.location %></i>
+      </li>
+    </ul>
+  <% end %>
+</div>
+
+<div>
+  <a href="/home">Home</a>
+</div>

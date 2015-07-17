@@ -1,0 +1,21 @@
+<div>
+  <h2>Select an album to delete:</h2>
+  <form action="/delete_selected_album">
+    <select name="album[id]">
+      <% Album.all.each do |album| %>
+        <option value="<%= album.id %>">
+          <%= album.title %>
+        </option>
+      <% end %>
+    </select>
+    <br>
+    <input type="radio" name="album[confirm_delete]" value="yes">Yes
+    <input type="radio" name="album[confirm_delete]" value="no">No<br>
+    <input type="submit">
+  </form>
+</div>
+
+
+<div>
+  <a href="/home">Home</a>
+</div>
