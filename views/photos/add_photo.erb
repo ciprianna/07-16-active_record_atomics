@@ -1,7 +1,7 @@
 <div>
   <% if @error %>
-    <% @new_photo.errors.each do |error| %>
-      <%= error %>
+    <% @new_photo.errors.full_message.each do |message| %>
+      <h3 class="error"><%= message %></h3>
     <% end %>
   <% end %>
 </div>

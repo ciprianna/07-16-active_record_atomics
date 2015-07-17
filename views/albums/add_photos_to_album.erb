@@ -1,0 +1,19 @@
+<div>
+  <h2>Select photos to add:</h2>
+  <form action="/save_photos_for_album">
+    <% Photo.all.each do |photo| %>
+      <label><input type="checkbox" name="photos[id][]" value="<%= photo.id %>"><%= photo.title %></label><br>
+      <img src="http://cdn.spectator.co.uk/wp-content/uploads/2013/06/Sheep_147759113.jpg" width="500px"><br>
+    <% end %>
+    <select name="albums[id]">
+      <% Album.all.each do |album| %>
+        <option value="<%= album.id %>"><%= album.title %></option>
+      <% end %>
+    </select>
+    <input type="submit">
+  </form>
+</div>
+
+<div>
+  <a href="/home">Home</a>
+</div>

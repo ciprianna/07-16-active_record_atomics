@@ -9,13 +9,13 @@
       <img src="https://aspirusseniorhealth.files.wordpress.com/2013/04/gold-star-seo1.jpg" width="50px" class="float width">
     <% end %>
     <div class="float__header">
-      <h3><%= photo.title %></h3>
+      <h3><a href="/album/photo/<%= photo.id %>"><%= photo.title %></a></h3>
     </div>
     <div style="clear: both">
 
     </div>
   </div>
-    <img src="https://www.tacomaworld.com/attachments/forms_photo-jpg.270566/" width="500px">
+    <img src="https://www.tacomaworld.com/attachments/forms_photo-jpg.270566/" width="500px"><br>
   <% end %>
 </div>
 
@@ -24,6 +24,10 @@
   <p>
     = top photos
   </p>
+</div>
+
+<div>
+  <a href="/add_photos_to_album">Add photos to this album</a>
 </div>
 
 <div>

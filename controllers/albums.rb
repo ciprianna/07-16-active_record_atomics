@@ -35,3 +35,25 @@ get "/save_new_album" do
     erb :"albums/success"
   end
 end
+
+# ------------------------------------------------------------------------------
+# Add photos to an existing album
+# ------------------------------------------------------------------------------
+# Step 1 - Display photos as a form
+get "/add_photos_to_album" do
+  erb :"albums/add_photos_to_album"
+end
+
+# Step 2 - Save selected photos for the album
+get "/save_photos_for_album" do
+  @album_to_add = Album.find(params["albums"]["id"])
+
+  photo_list = params["photos"]["id"]
+
+  photo_list.each do |photo|
+    to_add = Photo.find(photo)
+    @album_to_add.photos << to_add
+  end
+
+  erb :"index"
+end
