@@ -1,0 +1,14 @@
+<div>
+  <h2>Choose what albums you'd like the photo to go in:</h2>
+  <form action="/save_photo_to_albums">
+    <% Album.all.each do |album| %>
+      <label><input type="checkbox" name="albums[album_id][]" value="<%= album.id %>"><%= album.title %></label><br>
+    <% end %>
+    <input type="hidden" name="photos[id]" value="<%= @new_photo.id %>">
+    <input type="submit">
+  </form>
+</div>
+
+<div>
+  <a href="/home">Home</a>
+</div>
