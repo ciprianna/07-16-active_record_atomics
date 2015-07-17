@@ -1,0 +1,20 @@
+<div>
+  <% if @error %>
+    <% @new_album.errors.full_messages.each do |message| %>
+      <h3 class="error"><%= message %></h3>
+    <% end %>
+  <% end %>
+</div>
+
+<div>
+  <h2>Create a new album</h2>
+  <form action="/save_new_album">
+    <h3>What's the title of the new album?</h3>
+    <input type="text" name="[albums][title]" placeholder="Title">
+    <input type="submit">
+  </form>
+</div>
+
+<div>
+  <a href="/home">Home</a>
+</div>

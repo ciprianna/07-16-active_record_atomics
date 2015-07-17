@@ -18,3 +18,7 @@ html {
   float: left;
   width: 50%;
 }
+
+.error {
+  color: crimson;
+}
